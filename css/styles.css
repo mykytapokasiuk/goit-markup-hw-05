@@ -14,6 +14,10 @@
     /**FONTS*/
     --main-font: "Roboto", sans-serif;
     --secondary-font: "Raleway", sans-serif;
+    /**TRANSITIONS*/
+    --transition-color: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bg-color: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-box-shadow: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /**RESET STYLES*/
@@ -113,6 +117,7 @@ img {
     letter-spacing: 0.02em;
     text-decoration: none;
     padding: 24px 0px 24px 0px;
+    transition: var(--transition-color);
 }
 .header-item .current {
     color: var(--hover-focus);
@@ -132,6 +137,7 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     padding: 24px 0px 24px 0px;
+    transition: var(--transition-color);
 }
 .header-contacts-mail:is(:hover, :focus),
 .header-contacts-tel:is(:hover, :focus),
@@ -182,6 +188,7 @@ img {
     border-radius: 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     margin-top: 48px;
+    transition: var(--transition-bg-color), var(--transition-color), var(--transition-box-shadow);
 }
 .big-banner-btn:is(:hover, :focus) {
     background-color: var(--hover-focus);
@@ -304,6 +311,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: var(--transition-bg-color);
 }
 .social-item-icon {
     fill: var(--primary-bg);
@@ -336,6 +344,7 @@ img {
     justify-content: center;
     border: 1px solid var(--subtle-text);
     border-radius: 4px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customers-item-link:is(:hover, :focus) {
     border-color: var(--hover-focus);
@@ -346,6 +355,7 @@ img {
 }
 .customers-icon {
     fill: var(--subtle-text);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*!FOOTER*/
@@ -412,6 +422,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: var(--transition-bg-color);
 }
 .footer-social-link:is(:hover, :focus) {
     background-color: #31d0aa;
@@ -448,6 +459,7 @@ img {
     border-radius: 4px;
     cursor: pointer;
     padding: 12px 24px;
+    transition: var(--transition-bg-color), var(--transition-color), var(--transition-box-shadow);
 }
 .filter-btn:is(:hover, :focus) {
     background-color: var(--hover-focus);
@@ -467,6 +479,7 @@ img {
     background-color: var(--primary-bg);
     width: calc((100% - 48px) / 3);
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+    transition: var(--transition-box-shadow);
 }
 .finished-products-item:hover {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
@@ -482,6 +495,9 @@ img {
     border-bottom: 1px solid var(--accent);
     border-right: 1px solid var(--accent);
     border-left: 1px solid var(--accent);
+    transition: border-bottom 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border-right 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border-left 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .finished-products-title {
     font-weight: 600;
