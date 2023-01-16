@@ -13,6 +13,10 @@
         />
         <link
             rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+        <link
+            rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
             integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
             crossorigin="anonymous"
@@ -55,8 +59,14 @@
             <!-- Big banner -->
             <section class="big-banner big-banner-container">
                 <div class="container">
-                    <h1 class="big-banner-title">Effective Solutions for Your Business</h1>
-                    <button class="big-banner-btn" type="button">Order Service</button>
+                    <h1
+                        class="big-banner-title animate__animated animate__zoomInDown animate__slow"
+                    >
+                        Effective Solutions for Your Business
+                    </h1>
+                    <button class="big-banner-btn" type="button" data-modal-open>
+                        Order Service
+                    </button>
                 </div>
             </section>
             <!-- Why do you choose us -->
@@ -545,5 +555,15 @@
                 </div>
             </div>
         </footer>
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                <button type="button" class="close-icon-btn" data-modal-close>
+                    <svg class="close-icon" width="8" height="8">
+                        <use href="./images/icons.svg#icon-close-icon"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <script src="./js/modal.js"></script>
     </body>
 </html>
